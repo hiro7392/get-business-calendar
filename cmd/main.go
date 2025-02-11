@@ -11,13 +11,11 @@ import (
 )
 
 func main() {
-	// gRPC サーバーを起動するポート番号を指定
 	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	// gRPC サーバーの作成
 	grpcServer := grpc.NewServer()
 
 	// handler パッケージ内の実装で BusinessDays サービスのサーバーインスタンスを生成
