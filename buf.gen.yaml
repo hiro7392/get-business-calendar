@@ -1,8 +1,8 @@
 version: v1
 plugins:
   - name: go
-    out: internal/proto/generated
+    out: internal/proto/business_days
     opt: paths=source_relative
   - name: go-grpc
-    out: internal/proto/generated
+    out: internal/proto/business_days
     opt: paths=source_relative

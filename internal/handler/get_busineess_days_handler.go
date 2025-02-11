@@ -2,14 +2,15 @@ package handler
 
 import (
 	"context"
-	pb "github.com/hiro7392/get-business-calendar/internal/proto/generarted"
+
+	pb "github.com/hiro7392/get-business-calendar/internal/proto/business_days"
 )
 
 type businessDaysServer struct {
 	pb.UnimplementedBusinessDaysServer
 }
 
-func NewBusinessDaysServer() pb.ServiceRegistrar {
+func NewBusinessDaysServer() pb.BusinessDaysServer {
 	return &businessDaysServer{}
 }
 
