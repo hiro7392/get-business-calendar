@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package business_days;
+option go_package = "github.com/hiro7392/get-business-calendar/internal/proto/business_days";
+
+service BusinessDays {
+  rpc GetBusinessDays(BusinessDaysRequest) returns (BusinessDaysResponse) {}
+}
+
+message BusinessDaysRequest {
+  int32 year = 1;      // 例: 2025
+  int32 month = 2;     // 1～12
+  string country = 3;  // 例: "JP"
+}
+
+message BusinessDay {
+  string date = 1;    // 例: "2025-01-01"
+  int32 weekday = 2;  // 0:日曜日, 1:月曜日, ..., 6:土曜日
+}
+
+message BusinessDaysResponse {
+  repeated BusinessDay business_days = 1;
+}
+
