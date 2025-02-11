@@ -2,8 +2,7 @@ package handler
 
 import (
 	"context"
-
-	pb "github.com/hiro7392/get-business-calendar/internal/proto/business_days"
+	pb "github.com/hiro7392/get-business-calendar/internal/proto/generarted"
 )
 
 type businessDaysServer struct {

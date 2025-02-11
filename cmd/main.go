@@ -6,8 +6,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/hiro7392/get-business-calendar/internal/handler"                // サービス実装があるパッケージ
-	pb "github.com/hiro7392/get-business-calendar/internal/proto/business_days" // proto 定義のパッケージ
+	"github.com/hiro7392/get-business-calendar/internal/handler"            // サービス実装があるパッケージ
+	pb "github.com/hiro7392/get-business-calendar/internal/proto/generated" // proto 定義のパッケージ
 )
 
 func main() {

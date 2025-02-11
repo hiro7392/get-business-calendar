@@ -1,7 +1,8 @@
 syntax = "proto3";
 
 package business_days;
-option go_package = "github.com/hiro7392/get-business-calendar/internal/proto/business_days";
+
+option go_package = "github.com/hiro7392/get-business-calendar/internal/proto/generated";
 
 service BusinessDays {
   rpc GetBusinessDays(BusinessDaysRequest) returns (BusinessDaysResponse) {}

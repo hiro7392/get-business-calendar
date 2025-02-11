@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: business_days.proto
 
-package business_days
+package generated
 
 import (
 	context "context"
