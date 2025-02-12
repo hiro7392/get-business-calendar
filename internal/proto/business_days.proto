@@ -22,4 +22,3 @@ message BusinessDay {
 message BusinessDaysResponse {
   repeated BusinessDay business_days = 1;
 }
-
