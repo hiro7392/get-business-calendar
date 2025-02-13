@@ -6,3 +6,9 @@ plugins:
   - name: go-grpc
     out: internal/proto/business_days
     opt: paths=source_relative
+  - name: go
+    out: internal/proto/health_check
+    opt: paths=source_relative
+  - name: go-grpc
+    out: internal/proto/health_check
+    opt: paths=source_relative
