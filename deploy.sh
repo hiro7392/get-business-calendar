@@ -1,5 +1,4 @@
-# プロジェクトIDとリージョン（東京）を設定
-PROJECT_ID=project-monkey-chair      # ご自身のプロジェクトIDに置き換えてください
+PROJECT_ID=project-monkey-chair
 REGION=asia-northeast1
 # Docker イメージ名とサービス名を設定
 IMAGE_NAME=gcr.io/${PROJECT_ID}/get-business-calendar
@@ -20,6 +19,7 @@ gcloud run deploy ${SERVICE_NAME} \
   --platform managed \
   --region ${REGION} \
   --allow-unauthenticated \
-  --use-http2
+  --use-http2 \
+  --timeout=300s
 
 echo "Deployment complete."
