@@ -26,7 +26,8 @@ func main() {
 	grpcServer := grpc.NewServer()
 
 	healthServer := health.NewServer()
-	grpc_health_v1.RegisterHealthServer(grpcServer, healthServer)
+	healthServer.SetServingStatus("", grpc_health_v1.HealthCheckResponse_SERVING)
+	grpc_health_v1.RegisterHealthServer(grpcServer,healthServer)
 
 	businessDaysServer := handler.NewBusinessDaysServer()
 	pb.RegisterBusinessDaysServer(grpcServer, businessDaysServer)
@@ -37,4 +38,5 @@ func main() {
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
+	log.Printf("Listening on %s", lis.Addr().String())
 }

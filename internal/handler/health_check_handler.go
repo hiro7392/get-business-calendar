@@ -11,11 +11,12 @@ type healthCheckServer struct {
 	pb.UnimplementedHealthServer
 }
 
-func NewHealthCheckServer() pb.healthCheckServer {
+func NewHealthCheckServer() pb.HealthServer {
 	return &healthCheckServer{}
 }
 
 func (s *healthCheckServer) GetHealthCheck(ctx context.Context, req *pb.HealthCheckRequest) (*pb.HealthCheckResponse,error){
 	return &pb.HealthCheckResponse{
+		Status: 200,
 	},nil
 }
