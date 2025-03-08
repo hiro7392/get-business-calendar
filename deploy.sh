@@ -8,7 +8,6 @@ SERVICE_NAME=get-business-calendar
 echo "Building Docker image..."
 gcloud builds submit --config cloudbuild.yaml .
 
-# Cloud Run にデプロイ
 echo "Deploying to Cloud Run..."
 gcloud run deploy ${SERVICE_NAME} \
   --image ${IMAGE_NAME} \
